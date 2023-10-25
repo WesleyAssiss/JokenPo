@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".MainActivity">
+
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/borda"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/jokenpoTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="Jokenpô"
+        android:textSize="40dp"
+        android:layout_margin="50dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ImageButton
+        android:id="@+id/pedraBtn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/pedra"
+        app:layout_constraintEnd_toStartOf="@+id/papelBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/jokenpoTxt" />
+
+
+    <ImageButton
+        android:id="@+id/papelBtn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/papel"
+        app:layout_constraintStart_toEndOf="@id/pedraBtn"
+        app:layout_constraintTop_toBottomOf="@id/jokenpoTxt"
+        app:layout_constraintEnd_toStartOf="@id/tesouraBtn"/>
+
+    <ImageButton
+        android:id="@+id/tesouraBtn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/tesoura"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/papelBtn"
+        app:layout_constraintTop_toBottomOf="@id/jokenpoTxt" />
+
+    <TextView
+        android:id="@+id/suaEscolhaTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:textStyle="bold"
+        android:text="Sua Escolha:"
+        android:textSize="30dp"
+        app:layout_constraintStart_toEndOf="@+id/papelBtn"
+        app:layout_constraintStart_toStartOf="@+id/pedraBtn"
+        app:layout_constraintTop_toBottomOf="@+id/pedraBtn" />
+
+    <TextView
+        android:id="@+id/escolhaPlayerTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="-"
+        android:textSize="25dp"
+        app:layout_constraintStart_toEndOf="@+id/suaEscolhaTxt"
+        app:layout_constraintTop_toTopOf="@+id/suaEscolhaTxt" />
+
+
+    <TextView
+        android:id="@+id/escolhaCpuTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="38dp"
+        android:textStyle="bold"
+        android:text="Escolha CPU:"
+        android:textSize="30dp"
+        app:layout_constraintStart_toEndOf="@+id/papelBtn"
+        app:layout_constraintStart_toStartOf="@+id/pedraBtn"
+        app:layout_constraintTop_toBottomOf="@+id/suaEscolhaTxt" />
+
+    <TextView
+        android:id="@+id/opcaoCpuTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="-"
+        android:textSize="25dp"
+        app:layout_constraintStart_toEndOf="@+id/escolhaCpuTxt"
+        app:layout_constraintTop_toTopOf="@+id/escolhaCpuTxt" />
+
+    <TextView
+        android:id="@+id/voceXcpuTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:textStyle="bold"
+        android:text="Você X CPU"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/escolhaCpuTxt" />
+
+    <TextView
+        android:id="@+id/placarTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold"
+        android:text=":"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/voceXcpuTxt" />
+
+    <TextView
+        android:id="@+id/resultadoPlayerTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold"
+        android:text="0"
+        android:textSize="30dp"
+        android:layout_marginEnd="22dp"
+        app:layout_constraintTop_toBottomOf="@+id/voceXcpuTxt"
+        app:layout_constraintEnd_toStartOf="@id/placarTxt"/>
+
+    <TextView
+        android:id="@+id/resultadoCpuTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold"
+        android:text="0"
+        android:textSize="30dp"
+        android:layout_marginStart="22dp"
+        app:layout_constraintStart_toStartOf="@id/placarTxt"
+        app:layout_constraintTop_toBottomOf="@+id/voceXcpuTxt" />
+
+    <Button
+        android:id="@+id/novoJogoBtn"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold"
+        android:backgroundTint="@color/buttonBackground"
+        android:text="Nova Partida"
+        app:cornerRadius="0dp"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/pedraBtn"
+        app:layout_constraintEnd_toEndOf="@+id/tesouraBtn"
+        app:layout_constraintTop_toBottomOf="@+id/resultadoCpuTxt"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
